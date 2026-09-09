@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mentions légales | Athena Economics</title>
-<meta name="description" content="Mentions légales d'Athena Economics.">
+<title>Legal Notice | Athena Economics</title>
+<meta name="description" content="Legal notice for Athena Economics.">
   <link rel="canonical" href="https://www.athena-economics.com/mentions-legales.html">
 <style>
 
@@ -251,6 +251,23 @@
   footer .legal-links a:hover { color: #fff; }
 
 </style>
+  <!-- Google Consent Mode v2 (default: denied) -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      'analytics_storage': 'denied',
+      'ad_storage': 'denied',
+      'ad_user_data': 'denied',
+      'ad_personalization': 'denied'
+    });
+  </script>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-JZW0DWDC1N"></script>
+  <script>
+    gtag('js', new Date());
+    gtag('config', 'G-JZW0DWDC1N', { 'anonymize_ip': true });
+  </script>
 </head>
 <body>
 
@@ -280,19 +297,19 @@
 <main>
   <div class="legal">
     <section>
-      <h2>Mentions légales</h2>
-      <p><strong>Éditeur du site</strong><br>
-      Athena Economics — Guillaume Madelpuech, Entreprise Individuelle (EI), régime micro-entrepreneur<br>
-      Siège social : 17 Rue Napoléon Ancelin, 78400 Chatou, France<br>
-      SIREN : 106 776 826 — SIRET : 106 776 826 00013<br>
-      Code APE : 7022Z (Conseil pour les affaires et autres conseils de gestion)<br>
-      TVA non applicable, article 293 B du Code Général des Impôts<br>
-      Directeur de la publication : Guillaume Madelpuech<br>
-      Contact : Contact@athena-economics.com</p>
-      <p><strong>Hébergement</strong><br>
+      <h2>Legal Notice</h2>
+      <p><strong>Website Publisher</strong><br>
+      Athena Economics — Guillaume Madelpuech, sole proprietorship (Entreprise Individuelle, "micro-entrepreneur" regime), registered in France<br>
+      Registered address: 17 Rue Napoléon Ancelin, 78400 Chatou, France<br>
+      SIREN: 106 776 826 — SIRET: 106 776 826 00013<br>
+      Business activity code (APE): 7022Z (Business and other management consultancy activities)<br>
+      VAT not applicable, pursuant to Article 293 B of the French General Tax Code<br>
+      Publication director: Guillaume Madelpuech<br>
+      Contact: Contact@athena-economics.com</p>
+      <p><strong>Hosting</strong><br>
       GitHub, Inc. — 88 Colin P Kelly Jr St, San Francisco, CA 94107, USA</p>
-      <p><strong>Propriété intellectuelle</strong><br>
-      L'ensemble du contenu de ce site (textes, logo, mise en page) est la propriété exclusive d'Athena Economics, sauf mention contraire. Toute reproduction sans autorisation préalable est interdite.</p>
+      <p><strong>Intellectual Property</strong><br>
+      All content on this site (text, logo, layout) is the exclusive property of Athena Economics, unless otherwise stated. Any reproduction without prior authorisation is prohibited.</p>
     </section>
   </div>
 </main>
@@ -300,10 +317,106 @@
 <footer>
   <div>&copy; 2026 Athena Economics — Paris, France</div>
   <div class="legal-links">
-    <a href="mentions-legales.html">Mentions légales</a>
-    <a href="politique-de-confidentialite.html">Politique de confidentialité</a>
+    <a href="mentions-legales.html">Legal Notice</a>
+    <a href="politique-de-confidentialite.html">Privacy Policy</a>
   </div>
 </footer>
 
+  <!-- Cookie consent banner -->
+  <style>
+    #cookie-consent-banner {
+      display: none;
+      position: fixed;
+      left: 0; right: 0; bottom: 0;
+      z-index: 9999;
+      background: var(--navy, #0a1f3d);
+      color: #fff;
+      font-family: var(--font-sans, Arial, Helvetica, sans-serif);
+      font-size: 0.85rem;
+      line-height: 1.5;
+      padding: 1rem 1.25rem;
+      box-shadow: 0 -2px 10px rgba(0,0,0,0.25);
+    }
+    #cookie-consent-banner .cc-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 1rem;
+      justify-content: space-between;
+    }
+    #cookie-consent-banner p {
+      margin: 0;
+      flex: 1 1 420px;
+    }
+    #cookie-consent-banner a {
+      color: #fff;
+      text-decoration: underline;
+    }
+    #cookie-consent-banner .cc-actions {
+      display: flex;
+      gap: 0.6rem;
+      flex: 0 0 auto;
+    }
+    #cookie-consent-banner button {
+      font-family: var(--font-sans, Arial, Helvetica, sans-serif);
+      font-size: 0.85rem;
+      padding: 0.5rem 1rem;
+      border-radius: 3px;
+      cursor: pointer;
+      border: 1px solid #fff;
+    }
+    #cc-accept {
+      background: #fff;
+      color: var(--navy, #0a1f3d);
+      font-weight: bold;
+    }
+    #cc-decline {
+      background: transparent;
+      color: #fff;
+    }
+  </style>
+  <div id="cookie-consent-banner">
+    <div class="cc-inner">
+      <p>This site uses Google Analytics to measure audience traffic, with IP address anonymisation. This data is only collected with your consent. <a href="politique-de-confidentialite.html">Learn more</a></p>
+      <div class="cc-actions">
+        <button id="cc-decline">Decline</button>
+        <button id="cc-accept">Accept</button>
+      </div>
+    </div>
+  </div>
+  <script>
+    (function () {
+      var STORAGE_KEY = 'athena_cookie_consent';
+      var banner = document.getElementById('cookie-consent-banner');
+      var acceptBtn = document.getElementById('cc-accept');
+      var declineBtn = document.getElementById('cc-decline');
+      var stored;
+      try { stored = localStorage.getItem(STORAGE_KEY); } catch (e) { stored = null; }
+
+      if (stored === 'granted' && typeof gtag === 'function') {
+        gtag('consent', 'update', { 'analytics_storage': 'granted' });
+      } else if (stored !== 'granted' && stored !== 'denied') {
+        banner.style.display = 'block';
+      }
+
+      if (acceptBtn) {
+        acceptBtn.addEventListener('click', function () {
+          if (typeof gtag === 'function') {
+            gtag('consent', 'update', { 'analytics_storage': 'granted' });
+          }
+          try { localStorage.setItem(STORAGE_KEY, 'granted'); } catch (e) {}
+          banner.style.display = 'none';
+        });
+      }
+      if (declineBtn) {
+        declineBtn.addEventListener('click', function () {
+          try { localStorage.setItem(STORAGE_KEY, 'denied'); } catch (e) {}
+          banner.style.display = 'none';
+        });
+      }
+    })();
+  </script>
 </body>
 </html>
