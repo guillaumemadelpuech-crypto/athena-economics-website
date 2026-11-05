@@ -340,6 +340,21 @@
   footer .legal-links a { color: #6b7480 !important; border-bottom: 1px solid transparent !important; }
   footer .legal-links a:hover { color: var(--navy) !important; border-color: var(--navy) !important; }
   main { padding-bottom: 2.5rem !important; }
+
+  /* ---------- MOBILE NAV v2 ---------- */
+  @media (max-width: 680px) {
+    nav { position: relative; }
+    nav ul { display: flex; flex-wrap: nowrap; justify-content: space-between; gap: 0; font-size: 0.8rem; width: 100%; }
+    nav > ul > li > a, nav .no-link { padding: 0.5rem 0.15rem; white-space: nowrap; }
+    nav li { text-align: center; }
+    .has-dropdown { flex-basis: auto; order: 0; position: relative; }
+    .has-dropdown .no-link { display: inline-block; cursor: pointer; padding-bottom: 0.5rem; }
+    .has-dropdown .dropdown, .has-dropdown:hover .dropdown, .has-dropdown:focus-within .dropdown { display: none; position: absolute; top: 100%; left: 0; transform: none; opacity: 1; visibility: visible; width: 230px; padding: 0.3rem 0 0; z-index: 400; }
+    .has-dropdown.open .dropdown { display: flex; }
+    .dropdown li { text-align: left; }
+    .dropdown li a { width: 100%; box-shadow: 0 6px 16px rgba(10,31,61,0.15); }
+    .pub-hero p { display: none; }
+  }
 </style>
   <!-- Google Consent Mode v2 (default: denied) -->
   <script>
@@ -407,5 +422,9 @@
   </div>
 </footer>
 
+<script>
+document.querySelectorAll('.has-dropdown > .no-link').forEach(function(b){b.addEventListener('click',function(e){e.stopPropagation();b.parentNode.classList.toggle('open');});});
+document.addEventListener('click',function(){document.querySelectorAll('.has-dropdown.open').forEach(function(x){x.classList.remove('open');});});
+</script>
 </body>
 </html>

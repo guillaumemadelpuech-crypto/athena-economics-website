@@ -340,6 +340,37 @@
     .pub-title { font-size: 1rem; }
     .pub-desc { font-size: 0.9rem; }
   }
+
+  /* ---------- MOBILE NAV v2 ---------- */
+  @media (max-width: 680px) {
+    nav { position: relative; }
+    nav ul { display: flex; flex-wrap: nowrap; justify-content: space-between; gap: 0; font-size: 0.8rem; width: 100%; }
+    nav > ul > li > a, nav .no-link { padding: 0.5rem 0.15rem; white-space: nowrap; }
+    nav li { text-align: center; }
+    .has-dropdown { flex-basis: auto; order: 0; position: relative; }
+    .has-dropdown .no-link { display: inline-block; cursor: pointer; padding-bottom: 0.5rem; }
+    .has-dropdown .dropdown, .has-dropdown:hover .dropdown, .has-dropdown:focus-within .dropdown { display: none; position: absolute; top: 100%; left: 0; transform: none; opacity: 1; visibility: visible; width: 230px; padding: 0.3rem 0 0; z-index: 400; }
+    .has-dropdown.open .dropdown { display: flex; }
+    .dropdown li { text-align: left; }
+    .dropdown li a { width: 100%; box-shadow: 0 6px 16px rgba(10,31,61,0.15); }
+    .pub-hero p { display: none; }
+  }
+
+  /* ---------- PUBLICATIONS: uniform lines under titles ---------- */
+  .pub-title { margin: 0; }
+  .pub-title-fr { margin: 0.2rem 0 0; }
+  .pub-source, .pub-desc, .pub-links { font-family: var(--font-serif); font-style: italic; margin: 0.2rem 0 0; line-height: 1.4; }
+  .pub-desc { font-size: 0.93rem; color: var(--grey); font-style: normal; }
+  .pub-source, .pub-source em, .pub-links, .pub-links a { font-size: 0.85rem; color: #98a0aa !important; font-style: italic; text-transform: none; letter-spacing: 0; }
+  .pub-links a { font-family: var(--font-serif); }
+  .pub-links a:hover { color: var(--accent) !important; }
+  .pub-links { margin-top: 0.2rem; }
+  .pub-links a, .pub-links span { padding: 0; }
+  @media (max-width: 680px) {
+    .pub-desc { font-size: 0.9rem; }
+    .pub-source, .pub-source em, .pub-links, .pub-links a { font-size: 0.82rem; }
+    .pub-links a, .pub-links span { padding: 0; }
+  }
 </style>
 
 <!-- Google Consent Mode v2 (default: denied) -->
@@ -665,6 +696,10 @@
 
 <script>
 document.querySelectorAll('.pub-desc').forEach(function(d){d.title='Cliquer pour afficher / réduire';d.addEventListener('click',function(){d.classList.toggle('open');});});
+</script>
+<script>
+document.querySelectorAll('.has-dropdown > .no-link').forEach(function(b){b.addEventListener('click',function(e){e.stopPropagation();b.parentNode.classList.toggle('open');});});
+document.addEventListener('click',function(){document.querySelectorAll('.has-dropdown.open').forEach(function(x){x.classList.remove('open');});});
 </script>
 </body>
 </html>
