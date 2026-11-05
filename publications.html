@@ -314,6 +314,32 @@
   footer .legal-links a { color: #6b7480 !important; border-bottom: 1px solid transparent !important; }
   footer .legal-links a:hover { color: var(--navy) !important; border-color: var(--navy) !important; }
   main { padding-bottom: 2.5rem !important; }
+
+  /* ---------- PUBLICATIONS: compact + collapsible ---------- */
+  .pub-section { padding: 0.6rem 0; border-top: none; }
+  .pub-group { border-bottom: 1px solid var(--border); padding: 0.4rem 0 0.8rem; }
+  .pub-group > summary { list-style: none; cursor: pointer; display: flex; align-items: baseline; gap: 0.7rem; padding: 0.6rem 0; }
+  .pub-group > summary::-webkit-details-marker { display: none; }
+  .pub-group > summary::before { content: "\25B8"; color: var(--grey); font-size: 1rem; transition: transform 0.15s; }
+  .pub-group[open] > summary::before { transform: rotate(90deg); }
+  .pub-group > summary h2 { margin: 0; font-size: 1.35rem; }
+  .pub-count { font-family: var(--font-sans); font-size: 0.78rem; color: var(--grey); }
+  .pub-group .pub-list { gap: 0.9rem; margin-top: 0.4rem; }
+  .pub-item { padding-bottom: 0.9rem; }
+  .pub-title { font-size: 1.05rem; line-height: 1.35; }
+  .pub-title-fr { font-size: 0.92rem; }
+  .pub-source { font-size: 0.8rem; color: var(--grey) !important; margin-top: 0.15rem; }
+  .pub-source em { color: var(--grey); }
+  .pub-desc { font-size: 0.93rem; line-height: 1.45; margin-top: 0.35rem; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; cursor: pointer; }
+  .pub-desc.open { display: block; }
+  .pub-links { margin-top: 0.25rem; font-size: 0.78rem; }
+  .pub-links a { color: var(--grey); border-bottom: 1px solid transparent; }
+  .pub-links a:hover { color: var(--accent); border-color: var(--accent); }
+  @media (max-width: 680px) {
+    .pub-group > summary h2 { font-size: 1.2rem; }
+    .pub-title { font-size: 1rem; }
+    .pub-desc { font-size: 0.9rem; }
+  }
 </style>
 
 <!-- Google Consent Mode v2 (default: denied) -->
@@ -368,53 +394,58 @@
       </p>
   </section>
 
-  <section class="pub-section">
-    <h2>Articles</h2>
-    <div class="pub-list">
+    <section class="pub-section">
+    <details class="pub-group" open>
+      <summary><h2>Athena Economics</h2><span class="pub-count">6</span></summary>
+      <div class="pub-list">
 
-      <div class="pub-item">
+<div class="pub-item">
         <div class="pub-title">Place of Effective Management (POEM): The Castel Group's Tax Affairs in France — Wine, Family and a EUR 1 Billion Reassessment?</div>
         <div class="pub-source">Corporate Publication &middot; October 2026</div>
         <div class="pub-desc">An analysis of the governance dispute within the Castel Group and the reported French tax reassessment of up to EUR 1 billion, which appears to turn on the place of effective management (POEM). The note explains why modern substance analysis has not displaced POEM as a basis for French taxing rights.</div>
         <div class="pub-links"><a href="pdfs/2026-10-26-athena-economics-castel-poem-1bn-reassessment.pdf" target="_blank" rel="noopener">PDF</a></div>
       </div>
-
-      <div class="pub-item">
+<div class="pub-item">
         <div class="pub-title">Walking Along the Cliff Edge — French Finance Bill 2027: What Should Transfer Pricing Professionals Expect?</div>
         <div class="pub-source">Corporate Publication &middot; October 2026</div>
         <div class="pub-desc">An analysis of the RN and LFI programmes for transfer pricing and international taxation, including the proposed tax on multinationals based on French sales. The note quantifies the exposure of the low-margin French distributor of a profitable foreign group.</div>
         <div class="pub-links"><a href="pdfs/2026-10-14-athena-economics-french-finance-bill-2027-the-edge.pdf" target="_blank" rel="noopener">PDF</a></div>
       </div>
-
-      <div class="pub-item">
+<div class="pub-item">
         <div class="pub-title">Allocation Keys for Services: What Does the Market Say? A Comprehensive Survey of Allocation Keys for Intercompany Services</div>
         <div class="pub-source">Corporate Publication &middot; October 2026</div>
         <div class="pub-desc">A quantitative survey of the allocation keys cited in the 140 contributions to the OECD consultation on Chapter VII of the Transfer Pricing Guidelines. The note maps the keys most frequently associated with each of 14 business functions, based on 1,219 coded mentions.</div>
         <div class="pub-links"><a href="pdfs/2026-10-05-athena-economics-allocation-keys-for-services.pdf" target="_blank" rel="noopener">PDF</a></div>
       </div>
-
-      <div class="pub-item">
+<div class="pub-item">
         <div class="pub-title">The OECD Consultation on Chapter VII — Framing the Debate</div>
         <div class="pub-source">Corporate Publication &middot; September 2026</div>
         <div class="pub-desc">A content analysis of the 140 submissions received by the OECD on the proposed revision of Chapter VII of the Transfer Pricing Guidelines. Using a structured coding of 91 technical positions, the note maps where explicit industry support aligns with — or departs from — expectations.</div>
         <div class="pub-links"><a href="pdfs/2026-09-13-athena-economics-chapter-vii-framing-the-debate.pdf" target="_blank" rel="noopener">PDF</a></div>
       </div>
-
-      <div class="pub-item">
+<div class="pub-item">
         <div class="pub-title">McKinsey's Transfer Pricing Policies in France: A Criminal Investigation and a EUR 200 Million Transfer Pricing Reassessment?</div>
         <div class="pub-source">Corporate Publication &middot; September 2026</div>
                 <div class="pub-desc">An analysis of the French criminal investigation into McKinsey's transfer pricing arrangements and the resulting EUR 200 million tax reassessment.</div>
         <div class="pub-links"><a href="pdfs/2026-09-athena-economics-mckinsey-pnf-article.pdf" target="_blank" rel="noopener">PDF</a></div>
       </div>
-
-      <div class="pub-item">
+<div class="pub-item">
         <div class="pub-title">Revisions to Chapter VII: Initial Observations on Participation in the Public Consultation</div>
         <div class="pub-source">Corporate Publication &middot; August 2026</div>
                 <div class="pub-desc">A review of who contributed to the OECD's public consultation on the revision of Chapter VII of the Transfer Pricing Guidelines on intra-group services.</div>
         <div class="pub-links"><a href="pdfs/2026-08-athena-economics-chapter-vii-who-contributed-article.pdf" target="_blank" rel="noopener">PDF</a></div>
       </div>
 
-      <div class="pub-item">
+      </div>
+    </details>
+  </section>
+
+  <section class="pub-section">
+    <details class="pub-group">
+      <summary><h2>Articles Archive</h2><span class="pub-count">8</span></summary>
+      <div class="pub-list">
+
+<div class="pub-item">
         <div class="pub-title">VAT: Transfer Pricing Adjustments</div>
         <div class="pub-title-fr">TVA : Les ajustements de prix de transfert</div>
         <div class="pub-source"><em>Forvis Mazars — Avis d'experts</em> &middot; May 2025</div>
@@ -425,8 +456,7 @@
           <a href="pdfs/2025-05-forvis-mazars-tva-ajustements-prix-transfert.pdf" target="_blank">PDF</a>
         </div>
       </div>
-
-      <div class="pub-item">
+<div class="pub-item">
         <div class="pub-title">Profit Attribution to Permanent Establishments: The End of the French Exception</div>
         <div class="pub-title-fr">Attribution du Profit aux Établissements Stables : Retour sur la fin de l'exception française</div>
         <div class="pub-source"><em>Forvis Mazars — Avis d'experts</em> &middot; January 2025</div>
@@ -437,8 +467,7 @@
           <a href="pdfs/2025-01-forvis-mazars-attribution-profit-etablissements-stables.pdf" target="_blank">PDF</a>
         </div>
       </div>
-
-      <div class="pub-item">
+<div class="pub-item">
         <div class="pub-title">Transfer Pricing: A French/European Perspective on Donald J. Trump's Re-election</div>
         <div class="pub-title-fr">Prix de Transfert : Retour sur la réélection de Donald J. Trump, d'un point de vue français / européen</div>
         <div class="pub-source"><em>Forvis Mazars — Avis d'experts</em> &middot; December 2024</div>
@@ -449,8 +478,7 @@
           <a href="pdfs/2024-12-forvis-mazars-reelection-trump-prix-de-transfert.pdf" target="_blank">PDF</a>
         </div>
       </div>
-
-      <div class="pub-item">
+<div class="pub-item">
         <div class="pub-title">Transfer Pricing: CSR/ESG — Who Will Pay?</div>
         <div class="pub-title-fr">Prix de Transfert : RSE / ESG — Qui va payer ?</div>
         <div class="pub-source"><em>Forvis Mazars — Avis d'experts</em> &middot; November 2024</div>
@@ -461,8 +489,7 @@
           <a href="pdfs/2024-11-forvis-mazars-rse-esg-prix-de-transfert.pdf" target="_blank">PDF</a>
         </div>
       </div>
-
-      <div class="pub-item">
+<div class="pub-item">
         <div class="pub-title">Intra-Group Financing and Interest Deductibility — A New Development with the Apex Ruling</div>
         <div class="pub-title-fr">Financements intragroupes et déductibilité des intérêts — une nouvelle avancée avec l'arrêt Apex</div>
         <div class="pub-source"><em>KPMG Avocats</em> &middot; February 2022</div>
@@ -473,8 +500,7 @@
           <a href="pdfs/2022-02-kpmg-financements-intragroupe-arret-apex.pdf" target="_blank">PDF</a>
         </div>
       </div>
-
-      <div class="pub-item">
+<div class="pub-item">
         <div class="pub-title">Transfer Pricing Forum – France</div>
         <div class="pub-source"><em>Bloomberg Tax Transfer Pricing Forum (France panelist)</em> &middot; July 2018</div>
                 <div class="pub-desc">Comments submitted as the France country panelist to the Bloomberg Tax Transfer Pricing Forum on patent boxes and related R&D tax incentives.</div>
@@ -484,8 +510,7 @@
           <a href="pdfs/2018-07-nera-bloomberg-tax-transfer-pricing-forum.pdf" target="_blank">PDF</a>
         </div>
       </div>
-
-      <div class="pub-item">
+<div class="pub-item">
         <div class="pub-title">Economic Analysis for Developing Countries—Comments on the IMF, OECD, UN, and World Bank Toolkit</div>
         <div class="pub-source"><em>NERA Economic Consulting</em> &middot; March 2017</div>
                 <div class="pub-desc">Comments on the joint IMF-OECD-UN-World Bank toolkit for addressing transfer pricing challenges faced by developing countries.</div>
@@ -495,8 +520,7 @@
           <a href="pdfs/2017-03-nera-economic-analysis-developing-countries.pdf" target="_blank">PDF</a>
         </div>
       </div>
-
-      <div class="pub-item">
+<div class="pub-item">
         <div class="pub-title">Apple and the CCCTB: Can the European Commission Have Both?</div>
         <div class="pub-source"><em>Tax Notes International (p. 557) / NERA</em> &middot; February 2017</div>
                 <div class="pub-desc">An analysis of the tension between the European Commission's state aid case against Apple and its proposal for a Common Consolidated Corporate Tax Base.</div>
@@ -507,105 +531,22 @@
         </div>
       </div>
 
-    </div>
+      </div>
+    </details>
   </section>
 
   <section class="pub-section">
-    <h2>Contributions to OECD Public Consultations</h2>
-    <div class="pub-list">
+    <details class="pub-group">
+      <summary><h2>Books</h2><span class="pub-count">4</span></summary>
+      <div class="pub-list">
 
-      <div class="pub-item">
-        <div class="pub-title">Revisions to Chapter VII of the OECD Transfer Pricing Guidelines</div>
-        <div class="pub-source"><em>Athena Economics</em> &middot; July 2026</div>
-        <div class="pub-desc">Comments submitted to the OECD's public consultation on proposed revisions to Chapter VII of the Transfer Pricing Guidelines on intra-group services.</div>
-        <div class="pub-links">
-          <a href="pdfs/2026-07-athena-economics-comments-chapter-vii-tpg.pdf" target="_blank">Hyperlink / PDF</a>
-        </div>
-      </div>
-
-      <div class="pub-item">
-        <div class="pub-title">Public Consultation on the Transfer Pricing Aspects of Critical Minerals — Copper</div>
-        <div class="pub-source"><em>Forvis Mazars</em> &middot; September 2025</div>
-                <div class="pub-desc">Comments submitted to the OECD/IGF public consultation on the transfer pricing aspects of critical minerals, focusing on copper.</div>
-        <div class="pub-links">
-          <a href="pdfs/2025-09-forvis-mazars-comments-copper-transfer-pricing.pdf" target="_blank">Hyperlink / PDF</a>
-        </div>
-      </div>
-
-      <div class="pub-item">
-        <div class="pub-title">Comments on the Public Consultation Document on Addressing the Tax Challenges of the Digitalisation of the Economy</div>
-        <div class="pub-source"><em>NERA Economic Consulting</em> &middot; March 2019</div>
-                <div class="pub-desc">Comments submitted to the OECD's 2019 public consultation on addressing the tax challenges raised by the digitalisation of the economy.</div>
-        <div class="pub-links">
-          <a href="pdfs/2019-03-nera-comments-digitalisation.pdf" target="_blank">Hyperlink / PDF</a>
-        </div>
-      </div>
-
-      <div class="pub-item">
-        <div class="pub-title">Comments on the BEPS Action 8 Hard-to-Value Intangibles Implementation Guidance</div>
-        <div class="pub-source"><em>NERA Economic Consulting</em> &middot; October 2017</div>
-                <div class="pub-desc">Comments submitted to the OECD on the implementation guidance for hard-to-value intangibles under BEPS Action 8.</div>
-        <div class="pub-links">
-          <a href="pdfs/2017-10-nera-comments-beps-action8-htvi-implementation.pdf" target="_blank">Hyperlink / PDF</a>
-        </div>
-      </div>
-
-      <div class="pub-item">
-        <div class="pub-title">Comments on the OECD Discussion Draft of the BEPS Action 8 Hard-to-Value Intangibles Guidance</div>
-        <div class="pub-source"><em>NERA Economic Consulting</em> &middot; July 2017</div>
-        <div class="pub-desc">Comments on the OECD's discussion draft guidance on hard-to-value intangibles under BEPS Action 8, part of the broader transfer pricing framework for intangibles.</div>
-        <div class="pub-links"><span class="pub-link-disabled">Hyperlink (à confirmer)</span><span class="pub-sep">/</span><span class="pub-link-disabled">PDF (à venir)</span></div>
-      </div>
-
-      <div class="pub-item">
-        <div class="pub-title">Comments on the Attribution of Profits to Permanent Establishments Discussion Draft</div>
-        <div class="pub-source"><em>NERA Economic Consulting</em> &middot; June 2017</div>
-                <div class="pub-desc">Comments submitted to the OECD's 2017 discussion draft on the attribution of profits to permanent establishments.</div>
-        <div class="pub-links">
-          <a href="pdfs/2017-06-nera-comments-attribution-profits-pe.pdf" target="_blank">Hyperlink / PDF</a>
-        </div>
-      </div>
-
-      <div class="pub-item">
-        <div class="pub-title">Comments on the Attribution of Profits to Permanent Establishments — Additional Guidance (Part II)</div>
-        <div class="pub-source"><em>NERA Economic Consulting</em> &middot; September 2016</div>
-                <div class="pub-desc">Comments submitted to the OECD on additional guidance for the attribution of profits to permanent establishments under BEPS Action 7.</div>
-        <div class="pub-links">
-          <a href="pdfs/2016-09-nera-comments-attribution-profits-pe-part2.pdf" target="_blank">Hyperlink / PDF</a>
-        </div>
-      </div>
-
-      <div class="pub-item">
-        <div class="pub-title">Comments on the Revised Guidance on Profit Splits — Chapter IX of the OECD Transfer Pricing Guidelines</div>
-        <div class="pub-source"><em>NERA Economic Consulting</em> &middot; August 2016</div>
-                <div class="pub-desc">Comments submitted to the OECD on the revised guidance on the transactional profit split method under Chapter IX of the Transfer Pricing Guidelines.</div>
-        <div class="pub-links">
-          <a href="pdfs/2016-08-nera-comments-chapter-ix-tpg.pdf" target="_blank">Hyperlink / PDF</a>
-        </div>
-      </div>
-
-      <div class="pub-item">
-        <div class="pub-title">Comments on BEPS Action 10: Proposed Modifications to Chapter VII (Low Value-Adding Intra-Group Services)</div>
-        <div class="pub-source"><em>NERA Economic Consulting</em> &middot; January 2015</div>
-        <div class="pub-desc">Comments submitted to the OECD on the discussion draft proposing modifications to Chapter VII of the Transfer Pricing Guidelines relating to low value-adding intra-group services.</div>
-        <div class="pub-links"><span class="pub-link-disabled">Hyperlink (à confirmer)</span><span class="pub-sep">/</span><span class="pub-link-disabled">PDF (à venir)</span></div>
-      </div>
-
-    </div>
-  </section>
-
-  <section class="pub-section">
-    <h2>Books</h2>
-    <div class="pub-list">
-
-      <div class="pub-item">
+<div class="pub-item">
         <div class="pub-title">Fundamentals of Transfer Pricing — Volume I (Chapter 4)</div>
         <div class="pub-source"><em>WU Vienna / Linde &amp; Wolters Kluwer</em> &middot; 2025 &middot; with Gabriela Capristano Cardoso</div>
         <div class="pub-desc">A chapter covering transactional profit methods and other transfer pricing methods, part of the leading academic reference textbook on transfer pricing.</div>
         <div class="pub-links"><span class="pub-link-disabled">Hyperlink (à venir)</span><span class="pub-sep">/</span><span class="pub-link-disabled">PDF (à venir)</span></div>
       </div>
-
-      <div class="pub-item">
+<div class="pub-item">
         <div class="pub-title">Fundamentals of Transfer Pricing: General Topics and Specific Transactions (Chapter, pp. 107–140)</div>
         <div class="pub-source"><em>Wolters Kluwer</em> &middot; 2021 &middot; with Gabriela Capristano Cardoso</div>
         <div class="pub-desc">A chapter covering transactional profit methods and other transfer pricing methods, part of the leading academic reference textbook on transfer pricing.</div>
@@ -615,15 +556,13 @@
           <span class="pub-link-disabled">PDF (à venir)</span>
         </div>
       </div>
-
-      <div class="pub-item">
+<div class="pub-item">
         <div class="pub-title">Fundamentals of Transfer Pricing: Principles and Practice (1st edition, Chapter)</div>
         <div class="pub-source"><em>Wolters Kluwer</em> &middot; 2019 &middot; with Gabriela Capristano Cardoso</div>
         <div class="pub-desc">A chapter covering transactional profit methods and other transfer pricing methods, part of the leading academic reference textbook on transfer pricing.</div>
         <div class="pub-links"><span class="pub-link-disabled">Hyperlink (à venir)</span><span class="pub-sep">/</span><span class="pub-link-disabled">PDF (à venir)</span></div>
       </div>
-
-      <div class="pub-item">
+<div class="pub-item">
         <div class="pub-title">SAIA: Techno-Thriller</div>
         <div class="pub-source"><em>Self-published, Amazon KDP</em> &middot; 2019 &middot; fiction — unrelated to transfer pricing</div>
                 <div class="pub-desc">A self-published techno-thriller novel about artificial intelligence and cyberwarfare, unrelated to transfer pricing.</div>
@@ -632,8 +571,88 @@
         </div>
       </div>
 
-    </div>
+      </div>
+    </details>
   </section>
+
+  <section class="pub-section">
+    <details class="pub-group">
+      <summary><h2>OECD Contributions</h2><span class="pub-count">9</span></summary>
+      <div class="pub-list">
+
+<div class="pub-item">
+        <div class="pub-title">Revisions to Chapter VII of the OECD Transfer Pricing Guidelines</div>
+        <div class="pub-source"><em>Athena Economics</em> &middot; July 2026</div>
+        <div class="pub-desc">Comments submitted to the OECD's public consultation on proposed revisions to Chapter VII of the Transfer Pricing Guidelines on intra-group services.</div>
+        <div class="pub-links">
+          <a href="pdfs/2026-07-athena-economics-comments-chapter-vii-tpg.pdf" target="_blank">Hyperlink / PDF</a>
+        </div>
+      </div>
+<div class="pub-item">
+        <div class="pub-title">Public Consultation on the Transfer Pricing Aspects of Critical Minerals — Copper</div>
+        <div class="pub-source"><em>Forvis Mazars</em> &middot; September 2025</div>
+                <div class="pub-desc">Comments submitted to the OECD/IGF public consultation on the transfer pricing aspects of critical minerals, focusing on copper.</div>
+        <div class="pub-links">
+          <a href="pdfs/2025-09-forvis-mazars-comments-copper-transfer-pricing.pdf" target="_blank">Hyperlink / PDF</a>
+        </div>
+      </div>
+<div class="pub-item">
+        <div class="pub-title">Comments on the Public Consultation Document on Addressing the Tax Challenges of the Digitalisation of the Economy</div>
+        <div class="pub-source"><em>NERA Economic Consulting</em> &middot; March 2019</div>
+                <div class="pub-desc">Comments submitted to the OECD's 2019 public consultation on addressing the tax challenges raised by the digitalisation of the economy.</div>
+        <div class="pub-links">
+          <a href="pdfs/2019-03-nera-comments-digitalisation.pdf" target="_blank">Hyperlink / PDF</a>
+        </div>
+      </div>
+<div class="pub-item">
+        <div class="pub-title">Comments on the BEPS Action 8 Hard-to-Value Intangibles Implementation Guidance</div>
+        <div class="pub-source"><em>NERA Economic Consulting</em> &middot; October 2017</div>
+                <div class="pub-desc">Comments submitted to the OECD on the implementation guidance for hard-to-value intangibles under BEPS Action 8.</div>
+        <div class="pub-links">
+          <a href="pdfs/2017-10-nera-comments-beps-action8-htvi-implementation.pdf" target="_blank">Hyperlink / PDF</a>
+        </div>
+      </div>
+<div class="pub-item">
+        <div class="pub-title">Comments on the OECD Discussion Draft of the BEPS Action 8 Hard-to-Value Intangibles Guidance</div>
+        <div class="pub-source"><em>NERA Economic Consulting</em> &middot; July 2017</div>
+        <div class="pub-desc">Comments on the OECD's discussion draft guidance on hard-to-value intangibles under BEPS Action 8, part of the broader transfer pricing framework for intangibles.</div>
+        <div class="pub-links"><span class="pub-link-disabled">Hyperlink (à confirmer)</span><span class="pub-sep">/</span><span class="pub-link-disabled">PDF (à venir)</span></div>
+      </div>
+<div class="pub-item">
+        <div class="pub-title">Comments on the Attribution of Profits to Permanent Establishments Discussion Draft</div>
+        <div class="pub-source"><em>NERA Economic Consulting</em> &middot; June 2017</div>
+                <div class="pub-desc">Comments submitted to the OECD's 2017 discussion draft on the attribution of profits to permanent establishments.</div>
+        <div class="pub-links">
+          <a href="pdfs/2017-06-nera-comments-attribution-profits-pe.pdf" target="_blank">Hyperlink / PDF</a>
+        </div>
+      </div>
+<div class="pub-item">
+        <div class="pub-title">Comments on the Attribution of Profits to Permanent Establishments — Additional Guidance (Part II)</div>
+        <div class="pub-source"><em>NERA Economic Consulting</em> &middot; September 2016</div>
+                <div class="pub-desc">Comments submitted to the OECD on additional guidance for the attribution of profits to permanent establishments under BEPS Action 7.</div>
+        <div class="pub-links">
+          <a href="pdfs/2016-09-nera-comments-attribution-profits-pe-part2.pdf" target="_blank">Hyperlink / PDF</a>
+        </div>
+      </div>
+<div class="pub-item">
+        <div class="pub-title">Comments on the Revised Guidance on Profit Splits — Chapter IX of the OECD Transfer Pricing Guidelines</div>
+        <div class="pub-source"><em>NERA Economic Consulting</em> &middot; August 2016</div>
+                <div class="pub-desc">Comments submitted to the OECD on the revised guidance on the transactional profit split method under Chapter IX of the Transfer Pricing Guidelines.</div>
+        <div class="pub-links">
+          <a href="pdfs/2016-08-nera-comments-chapter-ix-tpg.pdf" target="_blank">Hyperlink / PDF</a>
+        </div>
+      </div>
+<div class="pub-item">
+        <div class="pub-title">Comments on BEPS Action 10: Proposed Modifications to Chapter VII (Low Value-Adding Intra-Group Services)</div>
+        <div class="pub-source"><em>NERA Economic Consulting</em> &middot; January 2015</div>
+        <div class="pub-desc">Comments submitted to the OECD on the discussion draft proposing modifications to Chapter VII of the Transfer Pricing Guidelines relating to low value-adding intra-group services.</div>
+        <div class="pub-links"><span class="pub-link-disabled">Hyperlink (à confirmer)</span><span class="pub-sep">/</span><span class="pub-link-disabled">PDF (à venir)</span></div>
+      </div>
+
+      </div>
+    </details>
+  </section>
+
 </main>
 
 <footer>
@@ -644,5 +663,8 @@
   </div>
 </footer>
 
+<script>
+document.querySelectorAll('.pub-desc').forEach(function(d){d.title='Cliquer pour afficher / réduire';d.addEventListener('click',function(){d.classList.toggle('open');});});
+</script>
 </body>
 </html>
