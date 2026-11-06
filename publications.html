@@ -371,6 +371,17 @@
     .pub-source, .pub-source em, .pub-links, .pub-links a { font-size: 0.82rem; }
     .pub-links a, .pub-links span { padding: 0; }
   }
+
+  /* ---------- LinkedIn button + mobile header order ---------- */
+  .hero p.cta { margin-top: 2rem; }
+  .btn-linkedin { display: inline-block; font-family: var(--font-sans); font-size: 0.9rem; letter-spacing: 0.02em; color: var(--navy); border: 1.5px solid var(--navy); border-radius: 3px; padding: 0.7rem 1.4rem; background: #fff; transition: background 0.2s ease, color 0.2s ease; }
+  .btn-linkedin:hover { background: var(--navy); color: #fff; }
+  @media (max-width: 680px) {
+    header { flex-direction: column; align-items: flex-start; gap: 0.5rem; }
+    .logo-block { order: 1; align-self: flex-start; }
+    nav { order: 2; width: 100%; }
+    .hero p.cta { margin-top: 1.4rem; }
+  }
 </style>
 
 <!-- Google Consent Mode v2 (default: denied) -->
