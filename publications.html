@@ -382,6 +382,21 @@
     nav { order: 2; width: 100%; }
     .hero p.cta { margin-top: 1.4rem; }
   }
+
+  /* ---------- ORANGE ACCENT + PUBLICATIONS TITLE ---------- */
+  header { border-bottom-color: #C04F15 !important; }
+  .pub-hero { padding: 2.4rem 0 0.4rem; }
+  .pub-hero h2 { font-size: 2.6rem; color: #C04F15; margin-bottom: 0.4rem; display: inline-block; }
+  .pub-info-btn { display: inline-block; vertical-align: middle; margin-left: 0.8rem; width: 1.5rem; height: 1.5rem; line-height: 1.35rem; text-align: center; border: 1px solid var(--border); border-radius: 50%; background: #fff; color: #98a0aa; font-family: var(--font-serif); font-style: italic; font-size: 0.85rem; cursor: pointer; padding: 0; }
+  .pub-info-btn:hover { color: #C04F15; border-color: #C04F15; }
+  .pub-info { display: none; font-family: var(--font-serif); font-size: 1.05rem; color: var(--grey); max-width: 760px; margin: 0.4rem 0 0.5rem; }
+  .pub-info.open { display: block; }
+  @media (max-width: 680px) {
+    .pub-hero { padding: 1.4rem 0 0.2rem; }
+    .pub-hero h2 { font-size: 2rem; }
+    .pub-hero p.pub-info { display: none; }
+    .pub-hero p.pub-info.open { display: block; }
+  }
 </style>
 
 <!-- Google Consent Mode v2 (default: denied) -->
