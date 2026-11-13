@@ -444,8 +444,8 @@
 
 <main>
   <section class="pub-hero">
-      <h2>Publications</h2>
-      <p style="font-family:var(--font-serif);font-size:1.15rem;color:var(--grey);max-width:760px;margin-bottom:0.5rem;">
+      <h2>Publications</h2><button type="button" class="pub-info-btn" id="pubInfoBtn" aria-expanded="false" aria-controls="pubInfo" title="Show / hide description">i</button>
+      <p class="pub-info" id="pubInfo">
         Articles, public consultation contributions, and books authored or co-authored by Guillaume Madelpuech,
         listed in reverse chronological order.
       </p>
@@ -751,6 +751,9 @@ document.querySelectorAll('.pub-desc').forEach(function(d){d.title='Cliquer pour
 <script>
 document.querySelectorAll('.has-dropdown > .no-link').forEach(function(b){b.addEventListener('click',function(e){e.stopPropagation();b.parentNode.classList.toggle('open');});});
 document.addEventListener('click',function(){document.querySelectorAll('.has-dropdown.open').forEach(function(x){x.classList.remove('open');});});
+</script>
+<script>
+(function(){var b=document.getElementById('pubInfoBtn'),p=document.getElementById('pubInfo');if(!b||!p)return;b.addEventListener('click',function(){var o=p.classList.toggle('open');b.setAttribute('aria-expanded',o);});})();
 </script>
 </body>
 </html>
